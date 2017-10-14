@@ -1,0 +1,46 @@
+@import url(reset.css);
+@import url(responsive.css);
+
+.container{
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.row .col {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.row-flex{
+	display: flex;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.col-flex{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.col-flex.col-1 {
+	flex: 1;
+}
+.col-flex.col-2 {
+	flex: 2;
+}
+.col-flex.col-3 {
+	flex: 3;
+}
+.col-flex.order-1 {
+	order: 1;
+}
+.col-flex.order-2 {
+	order: 2;
+}.col-flex.order-3 {
+	order: 3;
+}
+.row-grid{
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;/*66% 33%*//*repeat(2, 1fr), 3fr*/
+}

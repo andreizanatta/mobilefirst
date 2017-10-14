@@ -1,0 +1,45 @@
+img.responsive{
+	width: 100%;
+	height: auto;
+}
+.video-responsive {
+	position: relative;
+	padding-bottom: 56.25%;  /*16:9*/
+	padding-top: 25px;
+	height: 0;
+}
+.video-responsive iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.row:before, .row:after {
+	content: '';
+	display: table;
+}
+.row:after{
+	clear: both;
+}
+/*celulares landscape (deitado),
+ daqui pra cima, ou seja, sem media queries seria um 
+ celulare em portrait (em pé) */
+@media (min-width: 576px) {
+}
+/*tablets e maiores */
+@media (min-width: 768px) {
+}
+/* monitores maiores e menores */
+@media (min-width: 992px) {
+	.row .col {
+		width: 33%;
+		float: left;
+	}
+	header .menu-icon {
+		display: none;
+	}
+}
+/* monitores maiores */
+@media (min-width: 1200px) {
+}

@@ -1,0 +1,100 @@
+:root {
+    --cor1: #27ae60;
+    --cor2: #2ecc71;
+    --cor3: #ffffff;
+    --cor4: #000000;
+}
+* {
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	color: var(--cor1);
+}
+html, body {
+	overflow-x: hidden;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+h1, h3{
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
+h1, h3, p{
+	margin: 0;
+	padding: 0;
+}
+header {
+	background-color: var(--cor2);
+	text-align: center;
+	line-height: 100px;
+	height: 100px;
+}
+header .menu-icon {
+	position: absolute;
+	top: 35px;
+	left: 30px;
+	width: 35px;
+	height: 28px;
+	display: block;
+	background-color: var(--cor1);
+}
+header .menu-icon:before {
+	content: '';
+	margin: 5px auto;
+	width: 80%;
+	height: 4px;
+	display: block;
+	background-color: var(--cor3);
+	box-shadow: 0 7px 0 0 var(--cor3), 0 15px 0 0 var(--cor3);
+}
+header a {
+	color: var(--cor3);
+}
+header h1 a::after{
+	content: '';
+	width: 50px;
+	height: 4px;
+	margin: -30px auto;
+	display: block;
+	background-color: currentColor;
+}
+menu, menu ul, menu li {
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 100%;
+	background-color: var(--cor1);
+	z-index: 1;
+	padding: 15px 0;
+	border-right: 7px solid var(--cor1);
+	transform: translateX(-300px);
+}
+.menu-active menu {
+	transform: translateX(0);
+}
+.menu-active header, .menu-active main, .menu-active footer {
+	transform: translateX(300px);
+}
+header, menu, main, footer {
+	transition: transform .3s linear;
+}
+menu li a {
+	display: block;
+	color: var(--cor3);
+	padding: 15px;
+}
+menu li a:hover {
+	background-color: var(--cor2);
+}
