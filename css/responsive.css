@@ -36,6 +36,16 @@ img.responsive{
 		width: 33%;
 		float: left;
 	}
+	menu {
+		position: relative;
+		transform: translateX(0);
+		width: 100%;
+		text-align: center;
+		padding: 0;
+	}
+	menu li {
+		display: inline-block;
+	}
 	header .menu-icon {
 		display: none;
 	}
